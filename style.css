@@ -1,1 +1,269 @@
-!
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 5px;
+}
+
+
+.cabeçalho {
+    background-color: #1a1a1a;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+}
+
+.cabeçalho h2 {
+    font-size: 24px;
+}
+
+.cabeçalho nav {
+    display: flex;
+    gap: 25px;
+}
+
+.cabeçalho nav a {
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.cabeçalho nav a:hover {
+    color: #00c853;
+}
+
+
+body {
+    padding-top: 80px;
+}
+
+.banner {
+    background-color: #00c853; 
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h3 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.banner p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.banner a {
+    background-color: white;
+    color: #00c853;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.banner a:hover {
+    background-color: #009624;
+    color: white;
+}
+
+
+.sobre {
+    background-color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.sobre p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #555;
+}
+
+
+.produtos {
+    padding: 60px 40px;
+    background-color: #fff;
+}
+
+.produtos h3 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.produto {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.produto h4 {
+    font-size: 20px;
+    margin-top: 15px;
+    color: #111;
+}
+
+.produto p {
+    color: #555;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 992px) {
+    .grid-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-produtos {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contato {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contato h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contato p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+
+.formulario {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario input[type="submit"] {
+    background-color: #00c853;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #009624;
+}
+
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+@media (max-width: 768px) {
+    .cabeçalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cabeçalho nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .banner h3 {
+        font-size: 28px;
+    }
+
+    .banner p {
+        font-size: 18px;
+    }
+
+    .banner a {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
